@@ -87,8 +87,9 @@
             color: orange !important;
         }
 
-        .navbar li.active a {
-            background-color: rgba(0, 0, 0, 0.5);
+        .navbar li.active a,
+        .navbar li:hover a {
+            background-color: transparent;
         }
 
         .mainbody {
@@ -146,6 +147,36 @@
         table.flight-table tbody>tr>td:nth-child(1),
         table.flight-table tbody>tr>td:nth-child(3) {
             white-space: nowrap;
+        }
+
+        .navbar-collapse.collapse {
+            display: block!important;
+        }
+
+        .navbar-nav {
+            margin-left: 3px;
+        }
+
+        .navbar-nav>li,
+        .navbar-nav {
+            float: left !important;
+        }
+
+        .navbar-nav>li>a {
+            color: orange;
+        }
+
+        .navbar-brand,
+        .navbar-nav>li.active>a {
+            color: white;
+        }
+
+        .navbar-nav.navbar-right:last-child {
+            margin-right: -15px !important;
+        }
+
+        .navbar-right {
+            float: right!important;
         }
     </style>
 
@@ -216,26 +247,20 @@
 
 <body style="background: transparent">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top blackTransparent">
+    <nav class="navbar navbar-fixed-top blackTransparent">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                    aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-                <a class="navbar-brand openSans" href="#"><span class="orange">F</span>ucking <span class="orange">A</span>dam</a>
-            </div>
 
-            <div id="navbar" class="collapse navbar-collapse">
+                <a class="navbar-brand openSans" href="#"><span class="orange">F</span>ucking <span class="orange">A</span>dam</a>
+
                 <ul class="nav navbar-nav">
-                    <li class="active"><a data-toggle="tab" href="#day1">Day 1</a></li>
-                    <li><a data-toggle="tab" href="#day2">Day 2</a></li>
-                    <li><a data-toggle="tab" href="#day3">Day 3</a></li>
+                    <li class="active"><a id="day15btn" data-toggle="tab" href="#day1">Day 1</a></li>
+                    <li><a id="day16btn" data-toggle="tab" href="#day2">Day 2</a></li>
+                    <li><a id="day17btn" data-toggle="tab" href="#day3">Day 3</a></li>
                 </ul>
             </div>
+
+
         </div>
     </nav>
 
@@ -282,12 +307,12 @@
                                         <tr>
                                             <td title="JFK International Airport [Terminal 5]">
                                                 <h3>
-                                                    <a href="https://goo.gl/maps/PuEQWNae7FB2"><i class="fa fa-map-marker"></i> JFK [5]</a>
+                                                    <a href="https://goo.gl/maps/PuEQWNae7FB2"><i class="fa fa-map-marker"></i> JFK</a>
                                                 </h3>
                                             </td>
                                             <td title="McCarran International Airport [Terminal 3]">
                                                 <h3>
-                                                    <a href="https://goo.gl/maps/qND7czjmSHR2"> <i class="fa fa-map-marker"></i> LAS [3]</a>
+                                                    <a href="https://goo.gl/maps/qND7czjmSHR2"> <i class="fa fa-map-marker"></i> LAS</a>
                                                 </h3>
                                             </td>
                                         </tr>
@@ -334,7 +359,15 @@
                                 </div>
                             </div>
                             <div>
-                                TBD
+                                <h2>8:30 AM - <a href="http://www.greenandgoldsupplyco.com/">Green &amp; Gold Supply Co.</a></h2>
+
+                                <a href="https://goo.gl/maps/vUbgKgGAKsT2"><i class="fa fa-map-marker"></i> 2755 W Cheyenne Ave #103, North Las Vegas, NV 89032</a><br />
+                                <a href="https://goo.gl/maps/CRH2gf2gmHk"><i class="fa fa-map-marker"></i> 1112 S Commerce St, Las Vegas, NV 89102</a>
+                                <br />
+                                <br />
+
+                                <p>Not sure exactly which location we're going to. These are the two thrive locations that sell Gold Supply Co products.</p>
+
                             </div>
                         </div>
                     </div>
@@ -380,12 +413,12 @@
                                         <tr>
                                             <td title="McCarran International Airport [Terminal 3]">
                                                 <h3>
-                                                    <a href="https://goo.gl/maps/qND7czjmSHR2"> <i class="fa fa-map-marker"></i> LAS [3]</a>
+                                                    <a href="https://goo.gl/maps/qND7czjmSHR2"> <i class="fa fa-map-marker"></i> LAS</a>
                                                 </h3>
                                             </td>
                                             <td title="JFK International Airport [Terminal 5]">
                                                 <h3>
-                                                    <a href="https://goo.gl/maps/PuEQWNae7FB2"><i class="fa fa-map-marker"></i> JFK [5]</a>
+                                                    <a href="https://goo.gl/maps/PuEQWNae7FB2"><i class="fa fa-map-marker"></i> JFK</a>
                                                 </h3>
                                             </td>
                                         </tr>
@@ -418,10 +451,10 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script type="text/javascript">
             /*!
-                                                                                             * IE10 viewport hack for Surface/desktop Windows 8 bug
-                                                                                             * Copyright 2014-2015 Twitter, Inc.
-                                                                                             * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-                                                                                             */
+                                                                                                         * IE10 viewport hack for Surface/desktop Windows 8 bug
+                                                                                                         * Copyright 2014-2015 Twitter, Inc.
+                                                                                                         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+                                                                                                         */
 
             // See the Getting Started docs for more information:
             // http://getbootstrap.com/getting-started/#support-ie10-width
@@ -438,6 +471,11 @@
                     )
                     document.querySelector('head').appendChild(msViewportStyle)
                 }
+
+                //-- Auto Select current day
+                var now = new Date();
+                var day = now.getDate();
+                $("#day" + day + "btn").click();
 
             })();
     </script>
