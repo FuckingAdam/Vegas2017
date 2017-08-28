@@ -58,6 +58,10 @@
             background-size: cover;
         }
 
+        .openSans {
+            font-family: 'Open Sans', sans-serif !important;
+        }
+
         body {
             background: tranparent !important;
             color: white;
@@ -83,14 +87,8 @@
             color: orange !important;
         }
 
-        .starter-template {
-            padding: 40px 15px;
-            text-align: center;
-        }
-
         .navbar li.active a {
-
-            background-color: rgba(0, 0, 0, 0.75);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .mainbody {
@@ -98,7 +96,8 @@
         }
 
         .calendar-text {
-            margin-top: .3em;
+            margin-top: .25em;
+            font-family: 'Open Sans', sans-serif !important;
         }
 
         .margin-left {
@@ -138,6 +137,15 @@
         .topBottomPadding {
             padding-top: 20px;
             padding-bottom: 20px;
+        }
+
+        table.flight-table {
+            text-align: center;
+        }
+
+        table.flight-table tbody>tr>td:nth-child(1),
+        table.flight-table tbody>tr>td:nth-child(3) {
+            white-space: nowrap;
         }
     </style>
 
@@ -218,7 +226,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-                <a class="navbar-brand" href="#"><span class="orange">F</span>ucking <span class="orange">A</span>dam</a>
+                <a class="navbar-brand openSans" href="#"><span class="orange">F</span>ucking <span class="orange">A</span>dam</a>
             </div>
 
             <div id="navbar" class="collapse navbar-collapse">
@@ -254,10 +262,43 @@
                                 </div>
                             </div>
                             <div class="">
-                                <h2>9:00 PM - Touchdown</h2>
-                                <a href="https://goo.gl/maps/ZfETnKSfW882"> <i class="fa fa-map-marker"></i> McCarran International Airport</a>
+                                <br />
+                                <table class="table flight-table" style="width: 100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h3>5:48 PM</h3>
+                                            </td>
+                                            <td rowspan="2" style="vertical-align: middle">
+                                                <h2>
+                                                    <a href="https://www.google.com/search?q=jetblue+flight+711"><i class="fa fa-plane"></i> JetBlue Flight 711</a>
+                                                </h2>
+                                            </td>
 
-                                <hr />
+                                            <td>
+                                                <h3>9:00 PM</h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td title="JFK International Airport [Terminal 5]">
+                                                <h3>
+                                                    <a href="https://goo.gl/maps/CN4UFtyNP2v"><i class="fa fa-map-marker"></i> JFK [5]</a>
+                                                </h3>
+                                            </td>
+                                            <td title="McCarran International Airport [Terminal 3]">
+                                                <h3>
+                                                    <a href="https://goo.gl/maps/PuEQWNae7FB2"> <i class="fa fa-map-marker"></i> LAS [3]</a>
+                                                </h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
 
                                 <h2><a href="http://www.fukuburger.com/"><i class="fa fa-cutlery"></i> Burgers @ FuKu</a></h2>
                                 <a href="https://goo.gl/maps/TJ5tetdLyt72"><i class="fa fa-map-marker"></i> 3429 S Jones Blvd, Las Vegas, NV 89146 </a>
@@ -316,11 +357,45 @@
                                 <h2>5:00 PM - <a href="http://carnevino.com/">CarneVino</a></h2>
                                 <a href="https://goo.gl/maps/ZL3pi8G1FX62"><i class="fa fa-map-marker"></i> 3325 S Las Vegas Blvd, Las Vegas, NV 89109 </a>
                                 <br /><br />
-                                <a href="http://carnevino.com/">
-                                        <img src="images/CarneVino.jpg" />
-                                    </a>
+                                <a href="http://carnevino.com/"><img src="images/CarneVino.jpg" /></a>
 
+                                <br />
+                                <br />
+                                <table class="table flight-table" style="width: 100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h3>9:59 PM</h3>
+                                            </td>
+                                            <td rowspan="2" style="vertical-align: middle">
+                                                <h2>
+                                                    <a href="https://www.google.com/search?q=jetblue+flight+948"><i class="fa fa-plane"></i> JetBlue Flight 948</a>
+                                                </h2>
+                                            </td>
 
+                                            <td>
+                                                <h3>5:57 AM</h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td title="McCarran International Airport [Terminal 3]">
+                                                <h3>
+                                                    <a href="https://goo.gl/maps/PuEQWNae7FB2"> <i class="fa fa-map-marker"></i> LAS [3]</a>
+                                                </h3>
+                                            </td>
+                                            <td title="JFK International Airport [Terminal 5]">
+                                                <h3>
+                                                    <a href="https://goo.gl/maps/CN4UFtyNP2v"><i class="fa fa-map-marker"></i> JFK [5]</a>
+                                                </h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -343,10 +418,10 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script type="text/javascript">
             /*!
-                                                                                     * IE10 viewport hack for Surface/desktop Windows 8 bug
-                                                                                     * Copyright 2014-2015 Twitter, Inc.
-                                                                                     * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-                                                                                     */
+                                                                                             * IE10 viewport hack for Surface/desktop Windows 8 bug
+                                                                                             * Copyright 2014-2015 Twitter, Inc.
+                                                                                             * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+                                                                                             */
 
             // See the Getting Started docs for more information:
             // http://getbootstrap.com/getting-started/#support-ie10-width
